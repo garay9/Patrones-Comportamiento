@@ -10,6 +10,11 @@ package EJ4;
  *
  * @author jorge
  */
-public class NewClass {
+public class MusicGallery extends Receiver{
+
+    @Override
+    public void execute() {
+        System.out.println("Abriendo la galería de música");
+    }
     
 }

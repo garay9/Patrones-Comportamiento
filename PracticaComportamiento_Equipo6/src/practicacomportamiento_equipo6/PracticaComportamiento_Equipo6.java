@@ -5,6 +5,7 @@
  */
 package practicacomportamiento_equipo6;
 import EJ4.*;
+import EJ7.*;
 /**
  *
  * @author jorge
@@ -15,7 +16,8 @@ public class PracticaComportamiento_Equipo6 {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        caso1();
+        //caso1();
+        caso7();
     }
     
     public static void caso1(){
@@ -42,6 +44,24 @@ public class PracticaComportamiento_Equipo6 {
         
         invoker.setCommand(smsS);
         invoker.Invoke();
+    }
+    
+    public static void caso7(){
+        Biblioteca figueres = new Biblioteca();
+        figueres.addLibro(new Libro(1,"El Quijote"));
+        figueres.addLibro(new Libro(2, "Bases de datos"));
+        figueres.addLibro(new Libro(4, "Patrones de diseño"));
+        Estudiante george = new Estudiante("George");
+        Estudiante mary = new Estudiante("Mary");
+        
+        figueres.suscribir(mary);
+        figueres.suscribir(george);
+        
+        figueres.prestar("Patrones de diseño");
+        
+        figueres.darDeBaja(george);
+        
+        figueres.prestar("El Quijote");
     }
     
 }

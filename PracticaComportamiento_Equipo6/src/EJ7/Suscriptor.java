@@ -5,11 +5,10 @@
  */
 package EJ7;
 
-
 /**
  *
  * @author jorge
  */
-public class NewClass {
-    
+public interface Suscriptor {
+    public void update(Libro libro);
 }

@@ -14,8 +14,11 @@ import java.util.ArrayList;
 public class InsertHandler implements Handler {
 
     private Handler next;
-    public ArrayList<String> handlers;
+    public ArrayList<String> handlers = new ArrayList<>();
 
+    public InsertHandler() {
+    }
+    
     public Handler getNext() {
         return next;
     }

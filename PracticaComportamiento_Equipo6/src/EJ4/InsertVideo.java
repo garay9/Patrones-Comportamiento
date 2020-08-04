@@ -20,8 +20,10 @@ public class InsertVideo extends InsertHandler {
     public boolean insertBase(String file) {
         if (file.equals("Video")) {
             handlers.add(file);
+            System.out.println(" === Se insertó video! === ");
             return true;
         }else {
+            System.out.println("* No es un video, pasando al siguiente *");
             super.insertBase(file);
         }
         return false;

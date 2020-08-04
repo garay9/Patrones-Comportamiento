@@ -21,8 +21,10 @@ public class InsertAudio extends InsertHandler {
     public boolean insertBase(String file) {
         if (file.equals("Audio")) {
             handlers.add(file);
+            System.out.println(" === Se insertó audio! === ");
             return true;
         }else {
+            System.out.println("* No es un audio, pasando al siguiente *");
             super.insertBase(file);
         }
         return false;

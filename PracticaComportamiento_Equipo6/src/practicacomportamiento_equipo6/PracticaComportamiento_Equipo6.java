@@ -28,8 +28,9 @@ public class PracticaComportamiento_Equipo6 {
      */
     public static void main(String[] args) {
         //caso2();
-        //caso7();
         caso4();
+        //caso7();
+
     }
 
     public static void caso2() {
@@ -63,12 +64,20 @@ public class PracticaComportamiento_Equipo6 {
         Handler h2 = new InsertAudio();
         Handler h3 = new InsertImg();
         Handler h4 = new InsertTxt();
+        Handler h5 = new InsertVideo();
 
         h1.setNext(h2);
         h2.setNext(h3);
         h3.setNext(h4);
+        h4.setNext(h5);
 
-        h1.insertBase("Doc");
+        System.out.println("> Ingresando imagen");
+        h1.insertBase("Img");
+        
+        System.out.println("\n=============================================\n");
+        
+        System.out.println("> Ingresando video");
+        h1.insertBase("Video");
 
     }
 

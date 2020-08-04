@@ -19,8 +19,10 @@ public class InsertImg extends InsertHandler {
     public boolean insertBase(String file) {
         if (file.equals("Img")) {
             handlers.add(file);
+            System.out.println(" === Se insertó imagen! === ");
             return true;
         }else {
+            System.out.println("* No es una imagen, pasando al siguiente *");
             super.insertBase(file);
         }
         return false;

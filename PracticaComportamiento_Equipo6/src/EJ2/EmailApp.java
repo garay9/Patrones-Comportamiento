@@ -3,24 +3,18 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package EJ4;
+package EJ2;
 
 
 /**
  *
  * @author jorge
  */
-public class StartMusicCommand implements Command{
+public class EmailApp extends Receiver{
 
-    private Receiver music;
-
-    public StartMusicCommand(Receiver music) {
-        this.music = music;
-    }
-    
     @Override
     public void execute() {
-        music.execute();
+        System.out.println("Abriendo la aplicación para enviar emails");
     }
     
 }

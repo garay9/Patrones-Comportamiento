@@ -3,12 +3,18 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package EJ4;
+package EJ2;
+
 
 /**
  *
  * @author jorge
  */
-public interface Command {
-    public abstract void execute();
+public class MusicGallery extends Receiver{
+
+    @Override
+    public void execute() {
+        System.out.println("Abriendo la galería de música");
+    }
+    
 }

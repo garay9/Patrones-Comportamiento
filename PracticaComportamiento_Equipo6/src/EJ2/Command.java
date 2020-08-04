@@ -3,13 +3,12 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package EJ4;
-
+package EJ2;
 
 /**
  *
  * @author jorge
  */
-public abstract class Receiver {
+public interface Command {
     public abstract void execute();
 }

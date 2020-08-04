@@ -3,18 +3,18 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package EJ4;
+package EJ2;
 
 
 /**
  *
  * @author jorge
  */
-public class MusicGallery extends Receiver{
+public class ImageGallery extends Receiver{
 
     @Override
     public void execute() {
-        System.out.println("Abriendo la galería de música");
+        System.out.println("Abriendo la galería de imágenes");
     }
     
 }

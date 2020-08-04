@@ -3,24 +3,24 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package EJ4;
+package EJ2;
 
 
 /**
  *
  * @author jorge
  */
-public class SendEmailCommand implements Command{
+public class SendSMSCommand implements Command{
 
-    private Receiver emailApp;
+    private Receiver smsApp;
 
-    public SendEmailCommand(Receiver emailApp) {
-        this.emailApp = emailApp;        
+    public SendSMSCommand(Receiver smsApp) {
+        this.smsApp = smsApp;
     }
-        
+    
     @Override
     public void execute() {
-        emailApp.execute();
+        smsApp.execute();
     }
     
 }

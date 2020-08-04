@@ -10,6 +10,6 @@ package EJ2;
  *
  * @author jorge
  */
-public class NewClass {
-    
+public abstract class Receiver {
+    public abstract void execute();
 }

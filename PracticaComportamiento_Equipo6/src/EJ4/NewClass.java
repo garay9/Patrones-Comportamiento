@@ -10,11 +10,6 @@ package EJ4;
  *
  * @author jorge
  */
-public class ImageGallery extends Receiver{
-
-    @Override
-    public void execute() {
-        System.out.println("Abriendo la galería de imágenes");
-    }
+public class NewClass {
     
 }

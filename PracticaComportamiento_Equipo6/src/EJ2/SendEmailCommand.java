@@ -3,24 +3,24 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package EJ4;
+package EJ2;
 
 
 /**
  *
  * @author jorge
  */
-public class OpenGalleryCommand implements Command{
+public class SendEmailCommand implements Command{
 
-    private Receiver galeria;
+    private Receiver emailApp;
 
-    public OpenGalleryCommand(Receiver receiver) {
-        this.galeria = receiver;
+    public SendEmailCommand(Receiver emailApp) {
+        this.emailApp = emailApp;        
     }
-    
+        
     @Override
     public void execute() {
-        galeria.execute();
+        emailApp.execute();
     }
     
 }

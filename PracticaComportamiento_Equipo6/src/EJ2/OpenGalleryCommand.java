@@ -3,18 +3,24 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package EJ4;
+package EJ2;
 
 
 /**
  *
  * @author jorge
  */
-public class SMSApp extends Receiver{
+public class OpenGalleryCommand implements Command{
 
+    private Receiver galeria;
+
+    public OpenGalleryCommand(Receiver receiver) {
+        this.galeria = receiver;
+    }
+    
     @Override
     public void execute() {
-        System.out.println("Abriendo la aplicación para enviar sms");
+        galeria.execute();
     }
     
 }

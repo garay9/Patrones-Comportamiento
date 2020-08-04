@@ -3,24 +3,24 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package EJ4;
+package EJ2;
 
 
 /**
  *
  * @author jorge
  */
-public class Invoker {
-    private Command command;
+public class StartMusicCommand implements Command{
 
-    public Invoker() {
+    private Receiver music;
+
+    public StartMusicCommand(Receiver music) {
+        this.music = music;
     }
     
-    public void setCommand(Command command){
-        this.command = command;
+    @Override
+    public void execute() {
+        music.execute();
     }
     
-    public void Invoke(){
-        command.execute();
-    }
 }

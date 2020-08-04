@@ -4,7 +4,15 @@
  * and open the template in the editor.
  */
 package practicacomportamiento_equipo6;
-import EJ4.*;
+import EJ2.SMSApp;
+import EJ2.SendSMSCommand;
+import EJ2.Invoker;
+import EJ2.StartMusicCommand;
+import EJ2.EmailApp;
+import EJ2.MusicGallery;
+import EJ2.SendEmailCommand;
+import EJ2.OpenGalleryCommand;
+import EJ2.ImageGallery;
 import EJ7.*;
 /**
  *

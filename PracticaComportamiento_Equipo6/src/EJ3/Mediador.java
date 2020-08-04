@@ -3,12 +3,13 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package EJ6;
+package EJ3;
 
 /**
  *
- * @author danie
+ * @author Danny
  */
-public class NewClass {
-    
+public interface Mediador {
+    public void notify(Componente sender); 
+    public void setPeso(int peso);
 }

@@ -3,12 +3,15 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package EJ6;
+package EJ3;
 
 /**
  *
- * @author danie
+ * @author Danny
  */
-public class NewClass {
+public class ValvulaAgua extends Componente{
     
+    public void verterAgua(int pesoRopa){
+        System.out.println("Se vertió " + pesoRopa * 2  + " listros de agua");
+    }
 }

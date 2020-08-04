@@ -5,11 +5,12 @@
  */
 package EJ3;
 
-
 /**
  *
- * @author jorge
+ * @author Danny
  */
-public class NewClass {
-    
+public class Escotilla extends Componente{    
+    public void vaciarAgua(){
+        System.out.println("Se detuvo la lavadora y se vació el agua");
+    }
 }

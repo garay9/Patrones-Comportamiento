@@ -13,6 +13,7 @@ import EJ2.MusicGallery;
 import EJ2.SendEmailCommand;
 import EJ2.OpenGalleryCommand;
 import EJ2.ImageGallery;
+import EJ3.Lavadora;
 import EJ7.*;
 /**
  *
@@ -52,6 +53,11 @@ public class PracticaComportamiento_Equipo6 {
         
         invoker.setCommand(smsS);
         invoker.Invoke();
+    }
+    
+    public static void caso3(){
+        Lavadora lavadora = new Lavadora();
+        lavadora.seleccionarMetodoLavado(2);
     }
     
     public static void caso7(){

@@ -5,11 +5,18 @@
  */
 package EJ8;
 
+import java.util.List;
 
 /**
  *
  * @author jorge
  */
 public class NewClass {
-    
+     public static void main(String[] args) {
+	 
+	        SQLStatement query = new Select("name", new From("people"));
+	        Contexto ctx = new Contexto();
+	        System.out.println(query.interpret(ctx));
+	       
+	    }
 }

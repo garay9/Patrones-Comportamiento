@@ -4,7 +4,10 @@
  * and open the template in the editor.
  */
 package practicacomportamiento_equipo6;
+import EJ1.Calculadora;
+import EJ1.CareTaker;
 import EJ4.*;
+import javax.script.ScriptException;
 /**
  *
  * @author jorge
@@ -14,11 +17,11 @@ public class PracticaComportamiento_Equipo6 {
     /**
      * @param args the command line arguments
      */
-    public static void main(String[] args) {
+    public static void main(String[] args) throws ScriptException {
         caso1();
     }
     
-    public static void caso1(){
+    public static void caso2(){
         EmailApp email = new EmailApp();
         ImageGallery images = new ImageGallery();
         MusicGallery music = new MusicGallery();
@@ -43,5 +46,41 @@ public class PracticaComportamiento_Equipo6 {
         invoker.setCommand(smsS);
         invoker.Invoke();
     }
+    
+    public static void caso1() throws ScriptException{
+        Calculadora calculadora = new Calculadora(2.0, 3.0, 4.0);
+        System.out.println(calculadora.operarX("+", 5));
+        
+        System.out.println(calculadora.operacionBasica(3, "*", 5));
+        
+        System.out.println(calculadora.raiz(4));
+        
+        CareTaker careTaker = new CareTaker();
+        careTaker.setCheckpoint(calculadora.guardarEstado(calculadora));
+        
+        System.out.println("CAMBIANDO VALORES");
+        calculadora.setX(2);
+        calculadora.setY(2);
+        
+        System.out.println(calculadora.operarZ("+",
+                calculadora.operarY("+", 
+                calculadora.getX())));
+        
+        System.out.println("DEVOLVIENDO A ESTADO ORIGINAL");
+        
+        calculadora.reestablecer(careTaker.getCheckpoint());
+        
+        System.out.println(calculadora.operarZ("+",
+                calculadora.operarY("+", 
+                calculadora.getX())));
+        
+        
+        
+        
+        
+    }
+    
+    
+    
     
 }

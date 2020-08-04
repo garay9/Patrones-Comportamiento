@@ -4,11 +4,15 @@
  * and open the template in the editor.
  */
 package EJ6;
-
 /**
  *
- * @author danie
+ * @author Danny
  */
-public class NewClass {
+public class RegistroEmpleados implements Registro{
+
+    @Override
+    public IteradorEmpleado getIterador() {
+        return new IteradorEmpleado();
+    }
     
 }

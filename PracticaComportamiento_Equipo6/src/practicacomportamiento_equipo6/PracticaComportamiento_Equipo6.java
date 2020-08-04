@@ -14,6 +14,7 @@ import EJ2.SendEmailCommand;
 import EJ2.OpenGalleryCommand;
 import EJ2.ImageGallery;
 import EJ3.Lavadora;
+import EJ6.*;
 import EJ7.*;
 /**
  *
@@ -58,6 +59,27 @@ public class PracticaComportamiento_Equipo6 {
     public static void caso3(){
         Lavadora lavadora = new Lavadora();
         lavadora.seleccionarMetodoLavado(2);
+    }
+    
+    public static void caso6(){
+        Nodo raiz = new Nodo("PPC");
+        Nodo nodo1 = new Nodo("Marketing");
+        Nodo nodo2 = new Nodo("Finanzas");
+        Nodo nodo3 = new Nodo("Garay");
+        Nodo nodo4 = new Nodo("George");
+        Nodo nodo5 = new Nodo("Mary");
+        Nodo nodo6 = new Nodo("Danny");       
+        
+        raiz.agregarHijo(nodo1);
+        raiz.agregarHijo(nodo2);
+        nodo1.agregarHijo(nodo3);
+        nodo1.agregarHijo(nodo4);
+        nodo1.agregarHijo(nodo5);
+        nodo2.agregarHijo(nodo6);
+
+        
+        RegistroEmpleados registro = new RegistroEmpleados(); 
+        registro.getIterador().recorrerArbol(raiz);
     }
     
     public static void caso7(){

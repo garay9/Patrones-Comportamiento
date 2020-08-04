@@ -14,6 +14,12 @@ import EJ2.SendEmailCommand;
 import EJ2.OpenGalleryCommand;
 import EJ2.ImageGallery;
 import EJ3.Lavadora;
+import EJ4.Handler;
+import EJ4.InsertAudio;
+import EJ4.InsertDocument;
+import EJ4.InsertImg;
+import EJ4.InsertTxt;
+import EJ4.InsertVideo;
 import EJ6.*;
 import EJ7.*;
 /**
@@ -26,11 +32,11 @@ public class PracticaComportamiento_Equipo6 {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        //caso1();
+        //caso2();
         caso7();
     }
     
-    public static void caso1(){
+    public static void caso2(){
         EmailApp email = new EmailApp();
         ImageGallery images = new ImageGallery();
         MusicGallery music = new MusicGallery();
@@ -59,6 +65,28 @@ public class PracticaComportamiento_Equipo6 {
     public static void caso3(){
         Lavadora lavadora = new Lavadora();
         lavadora.seleccionarMetodoLavado(2);
+    }
+    
+    public static void caso4() {
+        Handler h1 = new InsertDocument();
+        Handler h2 = new InsertAudio();
+        Handler h3 = new InsertImg();
+        Handler h4 = new InsertTxt();
+        Handler h5 = new InsertVideo();
+
+        h1.setNext(h2);
+        h2.setNext(h3);
+        h3.setNext(h4);
+        h4.setNext(h5);
+
+        System.out.println("> Ingresando imagen");
+        h1.insertBase("Img");
+        
+        System.out.println("\n=============================================\n");
+        
+        System.out.println("> Ingresando video");
+        h1.insertBase("Video");
+
     }
     
     public static void caso6(){

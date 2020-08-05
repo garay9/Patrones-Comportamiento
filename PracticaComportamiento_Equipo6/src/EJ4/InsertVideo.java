@@ -19,7 +19,7 @@ public class InsertVideo extends InsertHandler {
     @Override
     public boolean insertBase(String file) {
         if (file.equals("Video")) {
-            handlers.add(file);
+            db.add(file);
             System.out.println(" === Se insertó video! === ");
             return true;
         }else {

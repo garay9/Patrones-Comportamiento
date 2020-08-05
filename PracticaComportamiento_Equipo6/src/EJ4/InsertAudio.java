@@ -14,13 +14,11 @@ public class InsertAudio extends InsertHandler {
     public InsertAudio() {
         super();
     }
-    
-    
 
     @Override
     public boolean insertBase(String file) {
         if (file.equals("Audio")) {
-            handlers.add(file);
+            db.add(file);
             System.out.println(" === Se insertó audio! === ");
             return true;
         }else {

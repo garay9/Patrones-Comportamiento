@@ -18,7 +18,7 @@ public class InsertTxt extends InsertHandler {
     @Override
     public boolean insertBase(String file) {
         if (file.equals("Txt")) {
-            handlers.add(file);
+            db.add(file);
             System.out.println(" === Se insertó documento de texto! === ");
             return true;
         } else {

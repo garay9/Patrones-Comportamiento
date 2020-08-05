@@ -23,8 +23,7 @@ import javax.swing.tree.TreeModel;
  * @author josed
  */
 public class Contexto {
-    private String expresion;
-    private TreeModel tree;
+
     private List<String> arbol;
     
     public Contexto(){

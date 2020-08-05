@@ -17,8 +17,8 @@ public class Calculadora {
     private double x;
     private double y;
     private double z;
-    ScriptEngineManager manager;
-    ScriptEngine engine;
+    private ScriptEngineManager manager;
+    private ScriptEngine engine;
     
     public Calculadora(double x, double y, double z){
         this.x = x;

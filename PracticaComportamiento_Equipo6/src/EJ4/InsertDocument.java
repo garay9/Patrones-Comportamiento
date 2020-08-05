@@ -18,7 +18,7 @@ public class InsertDocument extends InsertHandler {
     @Override
     public boolean insertBase(String file) {
         if (file.equals("Doc")) {
-            handlers.add(file);
+            db.add(file);
             System.out.println(" === Se insertó documento! === ");
             return true;
         } else {

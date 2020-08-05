@@ -25,7 +25,7 @@ import javax.swing.tree.TreeModel;
 public class Contexto {
     private String expresion;
     private TreeModel tree;
-    List<String> arbol;
+    private List<String> arbol;
     
     public Contexto(){
         arbol = new LinkedList<>();

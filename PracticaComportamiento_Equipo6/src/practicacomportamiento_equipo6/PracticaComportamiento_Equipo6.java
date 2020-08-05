@@ -4,6 +4,8 @@
  * and open the template in the editor.
  */
 package practicacomportamiento_equipo6;
+import EJ1.Calculadora;
+import EJ1.*;
 import EJ2.*;
 import EJ3.Lavadora;
 import EJ4.*;
@@ -14,6 +16,7 @@ import EJ8.From;
 import EJ8.SQLStatement;
 import EJ8.Select;
 import EJ8.Where;
+import javax.script.ScriptException;
 /**
  *
  * @author jorge
@@ -23,15 +26,43 @@ public class PracticaComportamiento_Equipo6 {
     /**
      * @param args the command line arguments
      */
-    public static void main(String[] args) {
+    public static void main(String[] args) throws ScriptException {
+        caso1();
         //caso2();
         //caso3();
         //caso4();
         //caso6();
         //caso7();
-        caso8();
+        //caso8();
     }
     
+    public static void caso1() throws ScriptException{
+        Calculadora calculadora = new Calculadora(2, 3, 4);
+        System.out.println("VALORES X = 2, Y = 3, Z = 4");
+       CareTaker careTaker = new CareTaker();
+  
+        System.out.println("CREANDO RESPALDO");
+        Memento memento = new Memento(calculadora.getX(), calculadora.getY(), calculadora.getZ());
+        careTaker.setCheckpoint(memento);
+        
+        System.out.println("RESULTADO ESPERADO: X+ Y = 5");
+        System.out.println(calculadora.operarX("+", calculadora.getY()));
+        
+        
+        System.out.println("ASIGNANDO LOS VALORES X=1 Y=2 = Y= 3");
+        calculadora.setX(1);
+        calculadora.setY(2);
+        calculadora.setZ(3);
+        
+        System.out.println("OPERACIÓN X+Y+Z = 6");
+        System.out.println(calculadora.operarX("+", calculadora.operarY("+", calculadora.getZ())));
+        
+        System.out.println("RESTABLECIENDO A PUNTO ANTERIOR");
+        calculadora.restablecer(careTaker.getCheckpoint());
+        System.out.println(memento.getX());
+        System.out.println("RESULTADO ESPERADO: X+ Y = 5");
+        System.out.println(calculadora.operarX("+", calculadora.getY()));
+    }
     public static void caso2(){
         EmailApp email = new EmailApp();
         ImageGallery images = new ImageGallery();

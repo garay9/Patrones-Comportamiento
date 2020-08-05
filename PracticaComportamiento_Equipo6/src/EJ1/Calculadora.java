@@ -74,7 +74,7 @@ public class Calculadora {
         return new Memento(calculadora.getX(), calculadora.getY(), calculadora.getZ());
     }
     
-    public void reestablecer(Memento memento){
+    public void restablecer(Memento memento){
         this.x = memento.getX();
         this.y = memento.getY();
         this.z = memento.getZ();

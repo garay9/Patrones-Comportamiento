@@ -16,7 +16,7 @@ public class Memento {
     private double y;
     private double z;
     
-    Memento(double x, double y, double z){
+    public Memento(double x, double y, double z){
         this.x = x;
         this.y = y;
         this.z = z;

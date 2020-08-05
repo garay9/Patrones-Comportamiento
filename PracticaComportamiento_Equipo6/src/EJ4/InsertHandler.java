@@ -14,7 +14,7 @@ import java.util.ArrayList;
 public class InsertHandler implements Handler {
 
     private Handler next;
-    public ArrayList<String> handlers = new ArrayList<>();
+    public ArrayList<String> db = new ArrayList<>();
 
     public InsertHandler() {
     }

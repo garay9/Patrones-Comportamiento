@@ -18,7 +18,7 @@ public class InsertImg extends InsertHandler {
     @Override
     public boolean insertBase(String file) {
         if (file.equals("Img")) {
-            handlers.add(file);
+            db.add(file);
             System.out.println(" === Se insertó imagen! === ");
             return true;
         }else {

@@ -14,29 +14,79 @@ import java.util.List;
  */
 public class Nodo {
     private String valor;
-    private List<Nodo> hijos = new ArrayList <Nodo>();
+    private List<Nodo> hijos;
     private Nodo padre;
+    private int indice;
     
     public Nodo(String v){
         valor = v;
+        hijos = new ArrayList <>();
     }
     
     public boolean esRaiz(){
-        return this.padre == null;
+        return this.getPadre() == null;
+    }
+    
+    public boolean esHoja(){
+        return hijos.isEmpty();
     }
     
     public void agregarHijo(Nodo nodo){
-        hijos.add(nodo);
-        nodo.padre = this;
+        getHijos().add(nodo);
+        nodo.setPadre(this);
+        nodo.setIndice(hijos.size()-1);
     }
-    
-    public List<Nodo> getHijos(){
-        return hijos;
-    }
-    
-    public String getValue(){
+
+    /**
+     * @return the valor
+     */
+    public String getValor() {
         return valor;
     }
+
+    /**
+     * @param valor the valor to set
+     */
+    public void setValor(String valor) {
+        this.valor = valor;
+    }
+
+    /**
+     * @return the hijos
+     */
+    public List<Nodo> getHijos() {
+        return hijos;
+    }
+
+    /**
+     * @return the padre
+     */
+    public Nodo getPadre() {
+        return padre;
+    }
+
+    /**
+     * @param padre the padre to set
+     */
+    public void setPadre(Nodo padre) {
+        this.padre = padre;
+    }
+
+    /**
+     * @return the indice
+     */
+    public int getIndice() {
+        return indice;
+    }
+
+    /**
+     * @param indice the indice to set
+     */
+    public void setIndice(int indice) {
+        this.indice = indice;
+    }
+    
+
     
     
 }

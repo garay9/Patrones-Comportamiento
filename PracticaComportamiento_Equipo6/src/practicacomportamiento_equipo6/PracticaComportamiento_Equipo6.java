@@ -4,24 +4,12 @@
  * and open the template in the editor.
  */
 package practicacomportamiento_equipo6;
-import EJ2.SMSApp;
-import EJ2.SendSMSCommand;
-import EJ2.Invoker;
-import EJ2.StartMusicCommand;
-import EJ2.EmailApp;
-import EJ2.MusicGallery;
-import EJ2.SendEmailCommand;
-import EJ2.OpenGalleryCommand;
-import EJ2.ImageGallery;
+import EJ2.*;
 import EJ3.Lavadora;
-import EJ4.Handler;
-import EJ4.InsertAudio;
-import EJ4.InsertDocument;
-import EJ4.InsertImg;
-import EJ4.InsertTxt;
-import EJ4.InsertVideo;
+import EJ4.*;
 import EJ6.*;
 import EJ7.*;
+import jdk.nashorn.api.tree.Tree;
 /**
  *
  * @author jorge
@@ -33,7 +21,7 @@ public class PracticaComportamiento_Equipo6 {
      */
     public static void main(String[] args) {
         //caso2();
-        caso7();
+        caso6();
     }
     
     public static void caso2(){
@@ -104,10 +92,14 @@ public class PracticaComportamiento_Equipo6 {
         nodo1.agregarHijo(nodo4);
         nodo1.agregarHijo(nodo5);
         nodo2.agregarHijo(nodo6);
-
+        
         
         RegistroEmpleados registro = new RegistroEmpleados(); 
-        registro.getIterador().recorrerArbol(raiz);
+        IteradorEmpleado iterador = registro.getIterador(raiz);
+        while(iterador.hasNext()){
+            Nodo n = (Nodo)iterador.next();
+            System.out.println(n.getValor());
+        }
     }
     
     public static void caso7(){

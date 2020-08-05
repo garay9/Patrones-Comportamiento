@@ -11,8 +11,8 @@ package EJ6;
 public class RegistroEmpleados implements Registro{
 
     @Override
-    public IteradorEmpleado getIterador() {
-        return new IteradorEmpleado();
+    public IteradorEmpleado getIterador(Nodo raiz) {
+        return new IteradorEmpleado(raiz);
     }
     
 }

@@ -10,5 +10,5 @@ package EJ6;
  * @author Danny
  */
 public interface Registro {
-   public IteradorEmpleado getIterador(); 
+   public IteradorEmpleado getIterador(Nodo raiz); 
 }

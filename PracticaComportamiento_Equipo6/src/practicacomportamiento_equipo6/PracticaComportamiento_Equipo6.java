@@ -9,6 +9,11 @@ import EJ3.Lavadora;
 import EJ4.*;
 import EJ6.*;
 import EJ7.*;
+import EJ8.Contexto;
+import EJ8.From;
+import EJ8.SQLStatement;
+import EJ8.Select;
+import EJ8.Where;
 /**
  *
  * @author jorge
@@ -22,8 +27,9 @@ public class PracticaComportamiento_Equipo6 {
         //caso2();
         //caso3();
         //caso4();
-        caso6();
+        //caso6();
         //caso7();
+        caso8();
     }
     
     public static void caso2(){
@@ -121,5 +127,23 @@ public class PracticaComportamiento_Equipo6 {
         
         figueres.prestar("El Quijote");
     }
+    public static void caso8(){
+        
+        System.out.println("LA CONSULTA ES:"
+                + "SELECT name from Cliente Where name = (SELECT name from People)");
+        SQLStatement query = new Select("name", new From("Cliente",
+            new Where("name = ", new Select("name", 
+            new From("People")))));
+        
+        Contexto ctx = new Contexto();
+        System.out.println("*********************");
+        System.out.println("PROCESO DE SINTÁCTICO");
+        System.out.println(query.interpret(ctx));
+        
+        System.out.println("*********************");
+        System.out.println("ÁRBOL DE PARSER");
+        ctx.printTree();
+    }
+    
     
 }

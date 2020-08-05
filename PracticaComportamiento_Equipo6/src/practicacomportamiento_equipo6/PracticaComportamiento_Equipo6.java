@@ -9,7 +9,6 @@ import EJ3.Lavadora;
 import EJ4.*;
 import EJ6.*;
 import EJ7.*;
-import jdk.nashorn.api.tree.Tree;
 /**
  *
  * @author jorge
@@ -21,7 +20,10 @@ public class PracticaComportamiento_Equipo6 {
      */
     public static void main(String[] args) {
         //caso2();
-        caso6();
+        //caso3();
+        //caso4();
+        //caso6();
+        caso7();
     }
     
     public static void caso2(){

@@ -5,8 +5,6 @@
  */
 package EJ6;
 
-import java.util.ArrayList;
-import java.util.List;
 import java.util.Stack;
 
 /**
@@ -15,13 +13,11 @@ import java.util.Stack;
  */
 public class IteradorEmpleado implements Iterador {
 
-    Nodo raiz;
     Nodo actual;
     Stack<Nodo> stack;
     int indice;
 
     public IteradorEmpleado(Nodo raiz) {
-        this.raiz = raiz;
         actual = raiz;
         stack = new Stack();
         stack.push(raiz);

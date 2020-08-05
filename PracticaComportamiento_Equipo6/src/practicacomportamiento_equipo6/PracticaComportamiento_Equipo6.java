@@ -22,8 +22,8 @@ public class PracticaComportamiento_Equipo6 {
         //caso2();
         //caso3();
         //caso4();
-        //caso6();
-        caso7();
+        caso6();
+        //caso7();
     }
     
     public static void caso2(){

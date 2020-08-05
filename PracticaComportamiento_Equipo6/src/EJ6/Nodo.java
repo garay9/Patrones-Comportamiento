@@ -10,7 +10,7 @@ import java.util.List;
 
 /**
  *
- * @author danie
+ * @author Danny
  */
 public class Nodo {
     private String valor;

@@ -7,6 +7,7 @@ package practicacomportamiento_equipo6;
 import EJ2.*;
 import EJ3.Lavadora;
 import EJ4.*;
+import EJ5.*;
 import EJ6.*;
 import EJ7.*;
 /**
@@ -22,7 +23,8 @@ public class PracticaComportamiento_Equipo6 {
         //caso2();
         //caso3();
         //caso4();
-        caso6();
+        caso5();
+        //caso6();
         //caso7();
     }
     
@@ -77,6 +79,20 @@ public class PracticaComportamiento_Equipo6 {
         System.out.println("> Ingresando video");
         h1.insertBase("Video");
 
+    }
+    
+    public static void caso5(){
+        Server dc = new DataCenter();
+        Server ws = new WebServer();
+        
+        System.out.println("=> Ejecutando procesos de Data Center");
+        dc.ejecutar();
+        
+        System.out.println("\n=============================================\n");
+        
+        System.out.println("=> Ejecutando procesos de Web Server");
+        ws.ejecutar();
+        
     }
     
     public static void caso6(){

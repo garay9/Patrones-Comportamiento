@@ -8,6 +8,7 @@ package EJ8;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.HashMap;
+import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
 import java.util.function.Predicate;
@@ -15,41 +16,29 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
+import javax.swing.tree.TreeModel;
 
 /**
  *
  * @author josed
  */
 public class Contexto {
-    private static Map<String, List<Row>> tables = new HashMap<>();
-    private String table;
-    private String Column;
-	 
-	    static {
-	        List<Row> list = new ArrayList<>();
-	        list.add(new Row("Garay", "Feliz"));
-	        tables.put("people", list);
-	    }
-
-    public Map<String, List<Row>> getTables() {
-        return tables;
-    }
-
-    public static void setTables(Map<String, List<Row>> tables) {
-        Contexto.tables = tables;
-    }
-
-    public void setTable(String table) {
-        this.table = table;
-    }
-
-    public void setColumn(String Column) {
-        this.Column = Column;
+    private String expresion;
+    private TreeModel tree;
+    List<String> arbol;
+    
+    public Contexto(){
+        arbol = new LinkedList<>();
     }
     
-    public String search(){
-       
-    }
-	 
+   public void match(String expresion){
+        arbol.add(expresion);
+   }
+   
+   public void printTree(){
+       for(String expresion : arbol){
+           System.out.println(expresion);
+       }
+   }
 	   
 }

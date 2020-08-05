@@ -7,6 +7,11 @@ package practicacomportamiento_equipo6;
 import EJ1.Calculadora;
 import EJ1.CareTaker;
 import EJ4.*;
+import EJ8.Contexto;
+import EJ8.From;
+import EJ8.SQLStatement;
+import EJ8.Select;
+import EJ8.Where;
 import javax.script.ScriptException;
 /**
  *
@@ -18,7 +23,7 @@ public class PracticaComportamiento_Equipo6 {
      * @param args the command line arguments
      */
     public static void main(String[] args) throws ScriptException {
-        caso1();
+        caso8();
     }
     
     public static void caso2(){
@@ -78,6 +83,23 @@ public class PracticaComportamiento_Equipo6 {
         
         
         
+    }
+    
+    public static void caso8(){
+             /*
+                    SELECT name FROM Client WHERE name = (SELECT name FROM People
+                */
+	        SQLStatement query = new Select("name", new From("Client", 
+                        new Where("name =", new Select("name", new From("People")))));
+	        Contexto ctx = new Contexto();
+                System.out.println("MOSTRANDO GRAMÁTICA");
+                System.out.println("*************************");
+                System.out.println(query.interpret(ctx));
+                
+                System.out.println("MOSTRANDO ARBOL");
+                System.out.println("*************************");
+	        
+                ctx.printTree();
     }
     
     

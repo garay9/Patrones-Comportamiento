@@ -20,28 +20,30 @@ public class From implements SQLStatement {
     
 
     
-    From(String table){
+    public From(String table){
         this.table = table;
 
     }
     
-    From(String table, Where where){
+    public From(String table, Where where){
         this.table = table;
         this.where = where;
 
     }
     
+  
+    
     @Override
         
     public String interpret(Contexto contexto) {
-	contexto.setTable(table);
-        
-	if (where == null) {
-            
-            return contexto.search();
-          
+	if(where != null){
+            contexto.match("from");
+            contexto.match("<"+table+">");
+            return "from "+table+" "+where.interpret(contexto);
         }
-	return where.interpret(contexto);
+        contexto.match("from");
+        contexto.match("<"+table+">");
+        return "from "+table;
     }
    
 }

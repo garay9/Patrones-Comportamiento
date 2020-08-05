@@ -14,16 +14,36 @@ import java.util.function.Predicate;
  */
 public class Where implements SQLStatement{
     private String condition;
-    private Where where;
+    private SQLStatement statement;
     
-    Where(String condition){
+    public Where(String condition){
         this.condition = condition;
     }
- 
+    
+    public Where(String condition, SQLStatement statement){
+        this.statement = statement;
+        this.condition = condition;
+
+    }
+    
+    public Where(SQLStatement statement){
+        this.statement = statement;
+
+    }
      
     @Override
     public String interpret(Contexto contexto) {
-        return condition;
+        if(statement != null && condition != null){
+            contexto.match("WHERE");
+            return "(WHERE "+condition+" "+statement.interpret(contexto)+")";
+        }else if(statement != null){
+            contexto.match("WHERE");
+            return "(WHERE "+statement.interpret(contexto)+")";
+        }
+        contexto.match("WHERE");
+        contexto.match("<"+condition+">");
+        return "WHERE "+condition;
     }
+    
     
 }

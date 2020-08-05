@@ -13,5 +13,6 @@ import java.util.List;
  */
 public interface SQLStatement {
     public String interpret(Contexto contexto); 
-   
+  
+    
 }

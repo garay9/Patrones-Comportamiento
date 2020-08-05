@@ -5,11 +5,14 @@
  */
 package EJ8;
 
+import java.util.List;
 
 /**
  *
- * @author jorge
+ * @author josed
  */
-public class NewClass {
+public interface SQLStatement {
+    public String interpret(Contexto contexto); 
+  
     
 }
